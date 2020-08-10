@@ -1,23 +1,22 @@
-var sevenAmInput = document.querySelector("#7am");
-var eightAmInput = document.querySelector("#8am");
-var nineAmInput = document.querySelector("#9am");
-var tenAmInput = document.querySelector("#10am");
-var elevenAmInput = document.querySelector("#11am");
-var twelvePmInput = document.querySelector("#12pm");
-var onePmInput = document.querySelector("#1pm");
-var twoPmInput = document.querySelector("#2pm");
-var threePmInput = document.querySelector("#3pm");
-var fourPmInput = document.querySelector("#4pm");
-var fivePmInput = document.querySelector("#5pm");
-var sixPmInput = document.querySelector("#6pm");
-var sevenPmInput = document.querySelector("#7pm");
-var eightPmInput = document.querySelector("#8pm");
-var ninePmInput = document.querySelector("#9pm");
-var saveButton = document.querySelector("#save");
+var sevenAmInput = document.querySelector("#seven-am");
+var eightAmInput = document.querySelector("#eight-am");
+var nineAmInput = document.querySelector("#nine-am");
+var tenAmInput = document.querySelector("#ten-am");
+var elevenAmInput = document.querySelector("#eleven-am");
+var twelvePmInput = document.querySelector("#twelve-pm");
+var onePmInput = document.querySelector("#one-pm");
+var twoPmInput = document.querySelector("#two-pm");
+var threePmInput = document.querySelector("#three-pm");
+var fourPmInput = document.querySelector("#four-pm");
+var fivePmInput = document.querySelector("#five-pm");
+var sixPmInput = document.querySelector("#six-pm");
+var sevenPmInput = document.querySelector("#seven-pm");
+var eightPmInput = document.querySelector("#eight-pm");
+var ninePmInput = document.querySelector("#nine-pm");
+var saveButton = document.querySelector("#ten-pm");
 
-
-saveButton.addEventListener("click", function(event) {
-    event.preventDefault();
+saveButton.addEventListener("click", function (event) {
+  event.preventDefault();
 
   // create user object from submission
   var schedule = {
@@ -30,12 +29,16 @@ saveButton.addEventListener("click", function(event) {
     onePm: onePmInput.value.trim(),
     twoPm: twoPmInput.value.trim(),
     threePm: ThreePmInput.value.trim(),
-    FourPm: FourPmInput.value.trim(),
-    FivePm: FivePmInput.value.trim(),
-    SixPm: sixPmInput.value.trim(),
-    SevenPm: sevenPmInput.value.trim(),
-  }
+    fourPm: FourPmInput.value.trim(),
+    fivePm: FivePmInput.value.trim(),
+    sixPm: sixPmInput.value.trim(),
+    sevenPm: sevenPmInput.value.trim(),
+  };
 
-    // set new submission
-    console.log(schedule),
-    localStorage.setItem("schedule", schedule)
+  // set new submission
+  console.log(schedule);
+  localStorage.setItem("schedule", schedule);
+
+  // Store updated tasks in localStorage
+  storeSchedule();
+});
