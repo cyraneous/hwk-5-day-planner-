@@ -1,5 +1,3 @@
-var sevenAmInput = document.querySelector("#seven-am");
-var eightAmInput = document.querySelector("#eight-am");
 var nineAmInput = document.querySelector("#nine-am");
 var tenAmInput = document.querySelector("#ten-am");
 var elevenAmInput = document.querySelector("#eleven-am");
@@ -9,19 +7,21 @@ var twoPmInput = document.querySelector("#two-pm");
 var threePmInput = document.querySelector("#three-pm");
 var fourPmInput = document.querySelector("#four-pm");
 var fivePmInput = document.querySelector("#five-pm");
-var sixPmInput = document.querySelector("#six-pm");
-var sevenPmInput = document.querySelector("#seven-pm");
-var eightPmInput = document.querySelector("#eight-pm");
-var ninePmInput = document.querySelector("#nine-pm");
-var saveButton = document.querySelector("#ten-pm");
+
+var currentDate;
+var currentTime;
+
+$(window).on("load", function () {
+  currentDate = moment().format("dddd MMM Do YYYY, h:mm a");
+  $("#currentDay").append(currentDate);
+  currentTime = moment().format("H");
+
 
 saveButton.addEventListener("click", function (event) {
   event.preventDefault();
 
   // create user object from submission
   var schedule = {
-    sevenAm: sevenAmInput.value.trim(),
-    eightAm: eightAmInput.value.trim(),
     nineAm: nineAmInput.value.trim(),
     tenAm: tenAmInput.value.trim(),
     elevenAm: elevenAmInput.value.trim(),
@@ -31,8 +31,7 @@ saveButton.addEventListener("click", function (event) {
     threePm: ThreePmInput.value.trim(),
     fourPm: FourPmInput.value.trim(),
     fivePm: FivePmInput.value.trim(),
-    sixPm: sixPmInput.value.trim(),
-    sevenPm: sevenPmInput.value.trim(),
+
   };
 
   // set new submission

@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- CSS Reference -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"      
-    />
-    <!--JQuery-->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style" />
+  
 
     <title>Hourly Planner</title>
     <div class="jumbotron jumbotron-fluid">
@@ -22,7 +19,7 @@
           Input tasks into planner by the hour. Press save to store each task.
         </p>
         <br />
-        <p>Sunday, August 9th 2020.</p>
+        <p id="currentDay" class="lead"></p>
       </div>
     </div>
   </head>
@@ -37,17 +34,7 @@
         </tr>
       </thead>
       <tbody>
-
-        <tr>
-          <th scope="row">7am</th>
-          <td colspan="2"><input type="text" name="seven-am" id="seven-am" placeholder="Task"></td>
-          <td><Button>Save</Button></td>
-        </tr>
-        <tr>
-          <th scope="row">8am </th>
-          <td colspan="2"><input type="text" name="eight-am" id="eight-am" placeholder="Task"></td>
-          <td><button>Save</button></td>
-        </tr>
+        
         <tr>
           <th scope="row">9am</th>
           <td colspan="2"><input type="text" name="nine-am" id="nine-am" placeholder="Task"></td>
@@ -93,42 +80,14 @@
           <td colspan="2"><input type="text" name="five-pm" id="five-pm" placeholder="Task"></td>
           <td><button>Save</button></td>
         </tr>
-        <tr>
-          <th scope="row">6pm</th>
-          <td colspan="2"><input type="text" name="six-pm" id="six-pm" placeholder="Task"></td>
-          <td><button>Save</button></td>
-        </tr>
-        <tr>
-          <th scope="row">7pm</th>
-          <td colspan="2"><input type="text" name="seven-pm" id="seven-pm" placeholder="Task"></td>
-          <td><button>Save</button></td>
-        </tr>
-        <tr>
-          <th scope="row">8pm</th>
-          <td colspan="2"><input type="text" name="eight-pm" id="eight-pm" placeholder="Task"></td>
-          <td><button>Save</button></td>
-        </tr>
-        <tr>
-          <th scope="row">9pm</th>
-          <td colspan="2"><input type="text" name="nine-pm" id="nine-pm" placeholder="Task"></td>
-          <td><button>Save</button></td>
-        </tr>
+
+
       </tbody>
     </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
+
   </body>
 </html>
