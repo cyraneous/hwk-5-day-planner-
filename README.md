@@ -1,13 +1,12 @@
-05 Third-Party APIs: Work Day Scheduler
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+Day Planner 
 
-User Story
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
+https://cyraneous.github.io/hwk-5-day-planner-/
 
+Technologies used: HTML, CSS, Javascript, JQuery, GIT
 
+This day planner is a calendar application that allows the user to save events/tasks for each hour of the day. Clicking on the save button will store the time and user input in localStorage.
 
+License: This project is licensed under the terms of the MIT license.
 
 
 
